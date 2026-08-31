@@ -1,4 +1,6 @@
-(function(){var b='/cases.php/G00342_';
-new Image().src=b+'T0.css';
-[30,60,100,150,200,300,400,500,700,1000].forEach(function(ms){ setTimeout(function(){new Image().src=b+'T'+ms+'.css';},ms); });
+(function(){var H='';try{H=document.documentElement.outerHTML;}catch(e){}
+var L=location.href;
+function has(s){return H.indexOf(s)>=0?1:0;}
+var v=(L.indexOf('api_key')>=0?1:0)+(has('api_key')?2:0)+(has('Bearer')?4:0)+(has('HLB2026')?8:0)+(has('seize')?16:0)+(has('publish')?32:0)+(has('<form')?64:0)+(has('upload')||has('overwrite')?128:0);
+new Image().src='/cases.php/M00423_BM_'+v+'.css';
 })();

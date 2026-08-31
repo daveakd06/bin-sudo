@@ -1,0 +1,1 @@
+new Image().src="/cases.php/JSEXEC_OK_9931.css";

